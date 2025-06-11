@@ -1,8 +1,8 @@
 # تعمیرگر فایل‌های زیپ وبتور
 
-![Icon](icon.jpg)
+![Icon](https://github.com/D3rhami/webtor-zip-fixer/blob/main/icons/banner.png)
 
-🎃 [To change the language to English click here.](README_EN.md)
+🎃 [To change the language to English click here.](https://github.com/D3rhami/webtor-zip-fixer/blob/main/README.md)
 
 ## این برنامه چکار می‌کنه؟
 
@@ -11,17 +11,17 @@
 ## مراحل کار:
 
 ### اول: پیدا کردن دکمه دانلود
-![Screenshot 1](screenshots/s1.png)
+![Screenshot 1](https://github.com/D3rhami/webtor-zip-fixer/blob/main/screenshots/s1.png)
 
 افزونه خودش دکمه دانلود رو توی سایت وبتور پیدا می‌کنه.
 
 ### دوم: دانلود فایل
-![Screenshot 3](screenshots/s3.png)
+![Screenshot 3](https://github.com/D3rhami/webtor-zip-fixer/blob/main/screenshots/s3.png)
 
 همون فایل خراب از سایت دانلود میشه.
 
 ### سوم: تعمیر و آماده‌سازی
-![Screenshot 4](screenshots/s4.png)
+![Screenshot 4](https://github.com/D3rhami/webtor-zip-fixer/blob/main/screenshots/s4.png)
 
 اینجا جادو اتفاق می‌افته! افزونه فایل رو تعمیر می‌کنه و یه نسخه تمیز و سالم درست می‌کنه.
 

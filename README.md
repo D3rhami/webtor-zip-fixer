@@ -1,8 +1,8 @@
 # Webtor-Zip-Fixer
 
-![Icon]( icon.jpg)
+![Icon](https://github.com/D3rhami/webtor-zip-fixer/blob/main/icons/banner.png)
 
-🎃 [تغییر زبان به فارسی اینجا کلیک کنید](https://github.com/D3rhami/README.md)
+🎃 [تغییر زبان به فارسی اینجا کلیک کنید](https://github.com/D3rhami/webtor-zip-fixer/blob/main/README_FA.md)
 
 ## What is this extension?
 
@@ -11,17 +11,17 @@ Webtor-Zip-Fixer is a simple Chrome extension that fixes broken ZIP files downlo
 ## How does it work?
 
 ### Step 1: Finding the download link
-![Screenshot 1](screenshots/s1.png)
+![Screenshot 1](https://github.com/D3rhami/webtor-zip-fixer/blob/main/screenshots/s1.png)
 
 The extension locates the download button available on the webtor.io website.
 
 ### Step 2: Downloading the ZIP file
-![Screenshot 3](screenshots/s3.png)
+![Screenshot 3](https://github.com/D3rhami/webtor-zip-fixer/blob/main/screenshots/s3.png)
 
 The corrupted ZIP file gets downloaded from the site.
 
 ### Step 3: Fixing the file
-![Screenshot 4](screenshots/s4.png)
+![Screenshot 4](https://github.com/D3rhami/webtor-zip-fixer/blob/main/screenshots/s4.png)
 
 The extension repairs the ZIP file and creates a healthy, extractable version.
 
