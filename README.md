@@ -49,7 +49,7 @@ The extension repairs the ZIP file and creates a healthy, extractable version.
 💯 Compatible with webtor.io
 
 ## 🐞 Issues & Support
-If you have bugs or feature requests, please open an issue here.
+If you have bugs or feature requests, please [open an issue here](https://github.com/D3rhami/webtor-zip-fixer/issues).
 
 ## LICENSE
-MIT License - see LICENSE file for details. 
+MIT License - see [LICENSE](https://github.com/D3rhami/webtor-zip-fixer/blob/main/LICENSE) file for details. 
