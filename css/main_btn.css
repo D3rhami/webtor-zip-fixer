@@ -1,0 +1,70 @@
+form.download-dir > button[type="submit"] {
+    display: none;
+    width: auto !important;
+    margin-top: 8px !important;
+}
+.dfz_main_btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 16px 10px 20px !important;
+    border-radius: 0.5rem !important;
+    font-weight: 500 !important;
+    font-size: 0.93rem !important;
+    cursor: pointer !important;
+    border: 1px solid #23242a !important;
+    background: transparent !important;
+    color: #23242a !important;
+    width: auto !important;
+    box-sizing: border-box !important;
+    flex-grow: 0;
+    height: 38px;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+[data-theme="night"] .dfz_main_btn {
+    border-color: #e06fa8 !important;
+    color: #e06fa8 !important;
+}
+.dfz_main_btn:hover {
+    background: #23242a !important;
+    color: #ffffff !important;
+}
+[data-theme="night"] .dfz_main_btn:hover {
+    background: #e06fa8 !important;
+    color: #1a1b26 !important;
+}
+.dfz_main_btn_icon {
+    width: 18px !important;
+    height: 18px !important;
+    object-fit: contain !important;
+    margin-right: 8px !important;
+    flex-shrink: 0;
+}
+.dfz_main_btn_icon[data-hover="true"] {
+    content: url('chrome-extension://__MSG_@@extension_id__/icons/btn_icon_dark.png') !important;
+}
+[data-theme="night"] .dfz_main_btn_icon[data-hover="true"] {
+    content: url('chrome-extension://__MSG_@@extension_id__/icons/btn_icon_light.png') !important;
+}
+.dfz_main_btn_text {
+    flex-grow: 0;
+    text-align: center;
+}
+.dfz_main_btn:hover::after {
+    content: "Download as Fixed ZIP - Webtor-Zip-Fixer v8.0.0";
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    z-index: 10;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+[data-theme="night"] .dfz_main_btn:hover::after {
+    background: #f8f8f2;
+    color: #333;
+}

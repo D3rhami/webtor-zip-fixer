@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Webtor-Zip-Fixer",
+  "version": "1.0.7",
+  "description": "Download and fix corrupted ZIP files from webtor.io, making them extractable with all directories intact.",
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://webtor.io/*"],
+      "js": [
+        "js/content.js",
+        "js/hide_element.js",
+        "js/toggle_btn.js",
+        "js/progress.js",
+        "js/download.js",
+        "js/main_btn.js",
+        "lib/jszip.min.js",
+        "js/zip_fixer.js"
+      ],
+      "css": [
+        "css/toggle_btn.css",
+        "css/main_btn.css",
+        "css/progress.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/btn_icon_dark.png",
+        "icons/btn_icon_light.png",
+        "icons/toggle_btn.png",
+        "icons/donate.png",
+        "icons/donate_dark.png",
+        "icons/download.png",
+        "icons/github.png",
+        "icons/copy.png",
+        "icons/reload.png"
+      ],
+      "matches": ["*://webtor.io/*"]
+    }
+  ]
+}

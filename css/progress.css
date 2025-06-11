@@ -1,0 +1,373 @@
+.dfz-progress-panel {
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    padding: 12px 15px;
+    margin-top: 8px;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    color: #333333;
+    font-size: 0.85rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+[data-theme="night"] .dfz-progress-panel {
+    background-color: #1a1b26;
+    border-color: #44475a;
+    color: #f8f8f2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.dfz-progress-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    padding: 3px 0;
+}
+.dfz-progress-row:last-child {
+    margin-bottom: 0;
+}
+.dfz-progress-text {
+    flex-grow: 1;
+    margin-right: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+}
+.dfz-progress-status {
+    font-weight: 600;
+    flex-shrink: 0;
+    min-width: 80px;
+    text-align: right;
+}
+.dfz-status-processing {
+    color: #ffa500;
+}
+[data-theme="night"] .dfz-status-processing {
+    color: #ffb86c;
+}
+.dfz-status-done {
+    color: #28a745;
+}
+[data-theme="night"] .dfz-status-done {
+    color: #50fa7b;
+}
+.dfz-status-failed {
+    color: #dc3545;
+}
+[data-theme="night"] .dfz-status-failed {
+    color: #ff5555;
+}
+.dfz-status-retrying {
+    color: #FFD700;
+}
+[data-theme="night"] .dfz-status-retrying {
+    color: #FFD700;
+}
+.dfz-progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    overflow: hidden;
+}
+[data-theme="night"] .dfz-progress-bar-container {
+    background-color: #44475a;
+}
+.dfz-progress-bar-fill {
+    height: 100%;
+    width: 20%;
+    background-color: #1d77c1;
+    animation: progressLoop 4s ease-in-out infinite;
+}
+[data-theme="night"] .dfz-progress-bar-fill {
+    background-color: #1d77c1;
+}
+@keyframes progressLoop {
+    0% { transform: translateX(-100%); }
+    45% { transform: translateX(500%); }
+    50% { transform: translateX(500%); }
+    95% { transform: translateX(-100%); }
+    100% { transform: translateX(-100%); }
+}
+.dfz-download-progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+[data-theme="night"] .dfz-download-progress-container {
+    background-color: #44475a;
+}
+.dfz-download-progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #1d77c1;
+    transition: width 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+[data-theme="night"] .dfz-download-progress-fill {
+    background-color: #1d77c1;
+}
+.dfz-download-progress-fill.retrying {
+    background-color: #FFD700;
+}
+[data-theme="night"] .dfz-download-progress-fill.retrying {
+    background-color: #FFD700;
+}
+.dfz-download-progress-slash {
+    height: 100%;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: skewX(-20deg);
+    animation: slashLoop 2s linear infinite;
+}
+@keyframes slashLoop {
+    0% { transform: skewX(-20deg) translateX(-100%); }
+    100% { transform: skewX(-20deg) translateX(600%); }
+}
+.dfz-download-stats {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 300px;
+    width: 100%;
+}
+[data-theme="night"] .dfz-download-stats {
+    color: #aaa;
+}
+.dfz-download-row-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.dfz-download-info-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0;
+    width: 100%;
+}
+.dfz-download-progress-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0;
+}
+.dfz-fixing-progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+[data-theme="night"] .dfz-fixing-progress-container {
+    background-color: #44475a;
+}
+.dfz-fixing-progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #1d77c1;
+    transition: width 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+[data-theme="night"] .dfz-fixing-progress-fill {
+    background-color: #1d77c1;
+}
+.dfz-fixing-progress-slash {
+    height: 100%;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: skewX(-20deg);
+    animation: slashLoop 2s linear infinite;
+}
+.dfz-fixing-stats {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 300px;
+    width: 100%;
+}
+[data-theme="night"] .dfz-fixing-stats {
+    color: #aaa;
+}
+.dfz-fixing-row-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.dfz-fixing-info-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0;
+    width: 100%;
+}
+.dfz-fixing-progress-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0;
+}
+.dfz-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.93rem;
+    cursor: pointer;
+    border: 1px solid #23242a;
+    background: transparent;
+    color: #23242a;
+    width: 180px;
+    box-sizing: border-box;
+    flex-grow: 0;
+    height: 38px;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+[data-theme="night"] .dfz-action-btn {
+    border-color: #e06fa8;
+    color: #e06fa8;
+}
+.dfz-action-btn:hover {
+    background: #23242a;
+    color: #ffffff;
+}
+[data-theme="night"] .dfz-action-btn:hover {
+    background: #e06fa8;
+    color: #1a1b26;
+}
+.dfz-action-btn-icon {
+    width: 21.6px;
+    height: 21.6px;
+    object-fit: contain;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+.dfz-action-btn-icon.github {
+    width: 25.92px;
+    height: 25.92px;
+}
+.dfz-action-btn-icon.donate[data-hover="true"] {
+    content: url('chrome-extension://__MSG_@@extension_id__/icons/donate.png') !important;
+}
+[data-theme="night"] .dfz-action-btn-icon.donate[data-hover="true"] {
+    content: url('chrome-extension://__MSG_@@extension_id__/icons/donate_dark.png') !important;
+}
+.dfz-action-btn-text {
+    flex-grow: 0;
+    text-align: center;
+    line-height: 21.6px;
+}
+.dfz-action-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #cccccc;
+}
+[data-theme="night"] .dfz-action-btn-container {
+    border-top: 1px solid #44475a;
+}
+.dfz-action-btn[href]:hover::after {
+    content: attr(href);
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    z-index: 10;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+[data-theme="night"] .dfz-action-btn[href]:hover::after {
+    background: #f8f8f2;
+    color: #333;
+}
+.dfz-copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0;
+    text-decoration: none;
+}
+.dfz-copy-btn-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    transition: filter 0.2s ease;
+}
+.dfz-copy-btn:hover .dfz-copy-btn-icon {
+    filter: brightness(80%);
+}
+.dfz-copy-popup {
+    position: fixed;
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+[data-theme="night"] .dfz-copy-popup {
+    background: #f8f8f2;
+    color: #333;
+}
