@@ -1,6 +1,6 @@
 # تعمیرگر فایل‌های زیپ وبتور
 
-![Icon](https://github.com/D3rhami/webtor-zip-fixer/blob/main/icons/banner.png)
+![Icon](https://github.com/D3rhami/webtor-zip-fixer/blob/main/icons/banner.jpg)
 
 🎃 [To change the language to English click here.](https://github.com/D3rhami/webtor-zip-fixer/blob/main/README.md)
 

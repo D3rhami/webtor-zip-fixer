@@ -1,6 +1,6 @@
 # Webtor-Zip-Fixer
 
-![Icon](https://github.com/D3rhami/webtor-zip-fixer/blob/main/icons/banner.png)
+![Icon](https://github.com/D3rhami/webtor-zip-fixer/blob/main/icons/banner.jpg)
 
 🎃 [تغییر زبان به فارسی اینجا کلیک کنید](https://github.com/D3rhami/webtor-zip-fixer/blob/main/README_FA.md)
 
