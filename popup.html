@@ -18,7 +18,7 @@
                 <div class="upload-area" id="uploadArea">
                     <img src="icons/magic-wand.png" alt="Fix ZIP" class="upload-icon">
                     <h3>Fix Your ZIP File</h3>
-                    <p>Upload a corrupted or unextractable ZIP file from webtor.io to fix it</p>
+                    <p>Upload a corrupted ZIP file from webtor.io to fix it</p>
                     <button class="upload-btn" id="uploadBtn">
                         <img src="icons/download.png" alt="Upload" class="btn-icon">
                         Choose ZIP File
@@ -43,6 +43,21 @@
                 </div>
                 <div class="progress-stats" id="progressStats">
                     Processing: 0 MB / 0 MB
+                </div>
+            </div>
+            
+            <div class="building-section" id="buildingSection" style="display: none;">
+                <div class="progress-header">
+                    <h3>Building ZIP File</h3>
+                    <div class="progress-info">
+                        <span>Finalizing structure...</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-pie" id="buildingPie"></div>
+                </div>
+                <div class="progress-stats">
+                    Please wait while we assemble your fixed ZIP file...
                 </div>
             </div>
             
@@ -77,7 +92,7 @@
                 </a>
                 <a href="https://webtor.io/donate" target="_blank" class="footer-link">
                     <img src="icons/donate.png" alt="Donate" class="footer-icon">
-                    Donate
+                    Donate to webtor.io
                 </a>
             </div>
         </div>

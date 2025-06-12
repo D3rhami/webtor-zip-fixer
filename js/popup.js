@@ -5,6 +5,7 @@
     const elements = {
         uploadSection: document.getElementById('uploadSection'),
         progressSection: document.getElementById('progressSection'),
+        buildingSection: document.getElementById('buildingSection'),
         resultSection: document.getElementById('resultSection'),
         uploadBtn: document.getElementById('uploadBtn'),
         fileInput: document.getElementById('fileInput'),
@@ -31,6 +32,7 @@
     function showSection(section) {
         elements.uploadSection.style.display = 'none';
         elements.progressSection.style.display = 'none';
+        elements.buildingSection.style.display = 'none';
         elements.resultSection.style.display = 'none';
         elements.resultSuccess.style.display = 'none';
         elements.resultError.style.display = 'none';
@@ -39,6 +41,8 @@
             elements.uploadSection.style.display = 'block';
         } else if (section === 'progress') {
             elements.progressSection.style.display = 'block';
+        } else if (section === 'building') {
+            elements.buildingSection.style.display = 'block';
         } else if (section === 'success') {
             elements.resultSection.style.display = 'block';
             elements.resultSuccess.style.display = 'block';
@@ -54,6 +58,13 @@
         elements.progressPercent.textContent = `${percentage}%`;
         if (text) elements.progressText.textContent = text;
         if (stats) elements.progressStats.textContent = stats;
+        
+        // Show building section when progress reaches 100%
+        if (percentage >= 100) {
+            setTimeout(() => {
+                showSection('building');
+            }, 500);
+        }
     }
 
     async function fixZipFile(file) {
@@ -76,9 +87,11 @@
             window.fixedBlob = fixedBlob;
             window.originalFileName = file.name;
 
+            // The building section is now shown by updateProgress when it reaches 100%
+            // Now we wait a bit to simulate the building process before showing the success screen
             setTimeout(() => {
                 showSection('success');
-            }, 500);
+            }, 2000);
 
         } catch (error) {
             console.error('Error fixing ZIP file:', error);

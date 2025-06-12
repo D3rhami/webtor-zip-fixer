@@ -123,7 +123,7 @@ body {
     font-size: 12px;
 }
 
-.progress-section {
+.progress-section, .building-section {
     text-align: center;
 }
 
@@ -151,6 +151,7 @@ body {
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 12px;
+    position: relative;
 }
 
 .progress-fill {
@@ -159,6 +160,23 @@ body {
     width: 0%;
     transition: width 0.3s ease;
     border-radius: 4px;
+}
+
+.progress-pie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.8) 50%, rgba(102, 126, 234, 0.3) 100%);
+    border-radius: 4px;
+    animation: slide 1.5s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% { left: -30%; }
+    50% { left: 100%; }
+    100% { left: -30%; }
 }
 
 .progress-stats {
