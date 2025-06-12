@@ -5,6 +5,7 @@
     let totalBytes = 0;
     let tempBlobUrl = null;
     let lastError = null;
+    let globalAttemptCount = 0;
 
     function createDownloadProgressDisplay() {
         const downloadInfoRow = document.createElement('div');
@@ -123,6 +124,7 @@
         }
 
         let attempt = 1;
+        globalAttemptCount++;
         const progressDisplay = createDownloadProgressDisplay();
 
         while (attempt <= maxAttempts) {
@@ -154,8 +156,8 @@
             if (attempt < maxAttempts) {
                 // Update to retrying status
                 window.updateProgressRowStatus('download_zip', 'retrying', {
-                    attempt,
-                    maxAttempts,
+                    attempt: globalAttemptCount,
+                    maxAttempts: globalAttemptCount + (maxAttempts - attempt),
                     startTime: attemptStartTime,
                     timeoutMs
                 });
@@ -169,12 +171,11 @@
                 // Add reload icon to textSpan
                 addReloadIcon();
                 const progressRow = window.progressRows['download_progress'];
-                if (progressRow && progressRow.progressSlash) {
+                if (progressRow?.progressSlash) {
                     progressRow.progressSlash.style.animation = 'none';
                 }
                 console.log(`📦 js/download.js All ${maxAttempts} download attempts failed. Last error: ${lastError || 'Unknown error'}`);
-                // Update stats to show error information
-                if (window.progressRows['download_info'] && lastError) {
+                if (window.progressRows['download_info']?.stats && lastError) {
                     window.progressRows['download_info'].stats.textContent = `Download failed: ${lastError}`;
                 }
             }
@@ -234,7 +235,7 @@
             if (progressRow && progressRow.progressSlash) {
                 progressRow.progressSlash.style.animation = 'none';
             }
-            if (window.progressRows['download_info']) {
+            if (window.progressRows['download_info']?.stats) {
                 window.progressRows['download_info'].stats.textContent = `Download cancelled by user`;
             }
             addReloadIcon();
