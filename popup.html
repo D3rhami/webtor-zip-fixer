@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webtor ZIP Fixer</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <img src="icons/icon48.png" alt="Webtor ZIP Fixer" class="logo">
+            <h1>Webtor ZIP Fixer</h1>
+        </div>
+        
+        <div class="main-content">
+            <div class="upload-section" id="uploadSection">
+                <div class="upload-area" id="uploadArea">
+                    <img src="icons/magic-wand.png" alt="Fix ZIP" class="upload-icon">
+                    <h3>Fix Your ZIP File</h3>
+                    <p>Upload a corrupted or unextractable ZIP file from webtor.io to fix it</p>
+                    <button class="upload-btn" id="uploadBtn">
+                        <img src="icons/download.png" alt="Upload" class="btn-icon">
+                        Choose ZIP File
+                    </button>
+                    <input type="file" id="fileInput" accept=".zip" style="display: none;">
+                    <div class="supported-formats">
+                        <small>Supports: .zip files from webtor.io</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-section" id="progressSection" style="display: none;">
+                <div class="progress-header">
+                    <h3>Fixing ZIP File</h3>
+                    <div class="progress-info" id="progressInfo">
+                        <span id="progressText">Analyzing file...</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-stats" id="progressStats">
+                    Processing: 0 MB / 0 MB
+                </div>
+            </div>
+            
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="result-success" id="resultSuccess" style="display: none;">
+                    <img src="icons/download.png" alt="Success" class="result-icon">
+                    <h3>ZIP File Fixed Successfully!</h3>
+                    <p>Your ZIP file has been repaired and is ready for download</p>
+                    <button class="download-btn" id="downloadBtn">
+                        <img src="icons/download.png" alt="Download" class="btn-icon">
+                        Download Fixed ZIP
+                    </button>
+                </div>
+                
+                <div class="result-error" id="resultError" style="display: none;">
+                    <img src="icons/reload.png" alt="Error" class="result-icon error">
+                    <h3>Failed to Fix ZIP File</h3>
+                    <p id="errorMessage">An error occurred while processing the file</p>
+                    <button class="retry-btn" id="retryBtn">
+                        <img src="icons/reload.png" alt="Retry" class="btn-icon">
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-links">
+                <a href="https://github.com/D3rhami/webtor-zip-fixer" target="_blank" class="footer-link">
+                    <img src="icons/github.png" alt="GitHub" class="footer-icon">
+                    GitHub
+                </a>
+                <a href="https://webtor.io/donate" target="_blank" class="footer-link">
+                    <img src="icons/donate.png" alt="Donate" class="footer-icon">
+                    Donate
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="lib/jszip.min.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html> 

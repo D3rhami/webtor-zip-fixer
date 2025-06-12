@@ -25,6 +25,13 @@ The corrupted ZIP file gets downloaded from the site.
 
 The extension repairs the ZIP file and creates a healthy, extractable version.
 
+## Alternative: Fix Already Downloaded Files
+
+### Using the Extension Popup
+![Screenshot 2](https://github.com/D3rhami/webtor-zip-fixer/blob/main/screenshots/s2.png)
+
+You can also fix ZIP files you've already downloaded by clicking the extension icon in your browser's toolbar. This opens a popup where you can upload any corrupted ZIP file from webtor.io to fix it instantly.
+
 ## Installation & Setup
 
 ### Download the extension
@@ -47,6 +54,7 @@ The extension repairs the ZIP file and creates a healthy, extractable version.
 🚀 Fast and easy to use
 🔧 Preserves original folder structure
 💯 Compatible with webtor.io
+🎯 Popup interface for fixing already downloaded files
 
 ## 🐞 Issues & Support
 If you have bugs or feature requests, please [open an issue here](https://github.com/D3rhami/webtor-zip-fixer/issues).

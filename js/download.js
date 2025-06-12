@@ -8,6 +8,15 @@
     let globalAttemptCount = 0;
 
     function createDownloadProgressDisplay() {
+        if (window.progressRows['download_info']) {
+            window.progressRows['download_info'].element.remove();
+            delete window.progressRows['download_info'];
+        }
+        if (window.progressRows['download_progress']) {
+            window.progressRows['download_progress'].element.remove();
+            delete window.progressRows['download_progress'];
+        }
+        
         const downloadInfoRow = document.createElement('div');
         downloadInfoRow.className = 'dfz-download-info-row';
         downloadInfoRow.dataset.id = 'download_info';
@@ -48,7 +57,6 @@
         const downloadZipTextSpan = window.progressRows['download_zip'].textSpan;
         downloadZipTextSpan.textContent = `> Download ZIP File [${percentage}%]`;
         
-        // Remove any existing reload icon when updating progress
         const existingReloadIcon = downloadZipTextSpan.querySelector('.dfz-reload-icon');
         if (existingReloadIcon) {
             existingReloadIcon.remove();
@@ -197,20 +205,15 @@
         reloadIcon.title = 'Retry download from scratch with a fresh connection';
         
         reloadIcon.addEventListener('click', function() {
-            // Prevent multiple clicks
             if (this.classList.contains('rotating')) return;
             
-            // Add rotating class
             this.classList.add('rotating');
             
-            // Start new download with the original URL
             if (window.dfzExtractedUrl) {
                 console.log("📦 js/download.js Restarting download from reload icon click");
                 
-                // Remove the reload icon from DOM to prevent further clicks
                 this.remove();
                 
-                // Start new download
                 window.dfzStartDownload(window.dfzExtractedUrl);
             } else {
                 console.log("📦 js/download.js Cannot restart download: URL not available");

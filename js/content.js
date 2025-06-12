@@ -1,4 +1,4 @@
-console.log("📦 Webtor-Zip-Fixer extension version 2.0 loaded");
+console.log(`📦 Webtor-Zip-Fixer extension version ${chrome.runtime.getManifest().version} loaded`);
 
 let downloadUrl = null;
 let urlCheckTimeout = null;
