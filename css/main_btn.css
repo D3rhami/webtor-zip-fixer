@@ -68,3 +68,22 @@ form.download-dir > button[type="submit"] {
     background: #f8f8f2;
     color: #333;
 }
+.dfz-reload-icon {
+    width: 18px !important;
+    height: 18px !important;
+    object-fit: contain;
+    margin-left: 5px;
+    display: inline-block !important;
+    cursor: pointer;
+}
+.dfz-reload-icon.rotating {
+    animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
